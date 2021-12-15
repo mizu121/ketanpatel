@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <script>
+window.onload=function() {
+  window.frames["printf"].focus();
+  window.frames["printf"].print();
+}
+</script>
+  
+    <body><center>
+        <iframe id="printf" name="printf" src="https://docs.google.com/gview?url=http://ketanpatel.in/files/biodata.pdf&embedded=true"
+        style="width: 70%; height: 600px">
+            <p>Your browser does not support iframes.</p>
+        </iframe></center>
+      <input type="button" onclick="var newWin = window.frames['printf'];
+newWin.document.write('<body onload=window.print()>This is a new page I inserted</body>');
+newWin.document.close();" value="Test print"/>
+   <button onclick="window.print()">Print this page</button>
+      
+      
+    </body>
+
+</html>
