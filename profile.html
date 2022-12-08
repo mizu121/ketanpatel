@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="https://ketanpatel.in/img/man.png" style="width:100%">
+  <h1>Ketan Patel</h1>
+  <p class="title">Former Home Minister Advisory Committee Member</p>
+  <p>Ministry Of Home Affairs Government Of India</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/ketanpatelofficial/"><i class="fa fa-instagram"></i></a>
+<p><button class="modal-button" href="#myModal1">Passport</button></p>
+<p><button class="modal-button" href="#myModal2">International License</button></p>
+<p><button class="modal-button" href="#myModal3">Contact</button></p>
+<button onclick="location.href='https://ketanpatel.in'" type="button">
+         Website</button>
+
+  </div>
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Passport</h2>
+    </div>
+    <div class="modal-body">
+      <p><img src="https://raw.githubusercontent.com/mizu121/ketanpatel/main/img/IMG_6720.jpg" style="width:30%  "></p>
+      <p><img src="https://github.com/mizu121/ketanpatel/blob/main/img/IMG_6721.jpg?raw=true" style="width:50%  "></p>
+            <p><img src="https://raw.githubusercontent.com/mizu121/ketanpatel/main/img/IMG_6723.jpg" style="width:50%  "></p>
+            <p><img src="https://raw.githubusercontent.com/mizu121/ketanpatel/main/img/IMG_6722.jpg" style="width:50%  "></p>
+            <br>
+            <br>
+
+    </div>
+
+  </div>
+
+</div>
+<br>
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>International License</h2>
+      <p><img src="https://raw.githubusercontent.com/mizu121/ketanpatel/main/img/IMG_6709.jpg" style="width:40%  "></p>
+      <p><img src="https://raw.githubusercontent.com/mizu121/ketanpatel/main/img/IMG_6711.jpg" style="width:40%  "></p>
+    </div>
+    </div>
+    </div>
+
+
+    <!-- The Modal -->
+<div id="myModal3" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Contact</h2>
+      <p>Ketan Patel<p>
+      <p>Mobile : +917874010000</p>
+      <p>Email : KETANPATELOFFICE@GMAIL.COM</p>
+      <p>Address : DABHEL CHECKPOST,
+DAMAN – 396210 (INDIA)</p>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+<script>
+// Get the button that opens the modal
+var btn = document.querySelectorAll("button.modal-button");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
+     }
+    }
+}
+</script>
+
+
+</body>
+</html>
